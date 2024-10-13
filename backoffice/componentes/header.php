@@ -1,5 +1,5 @@
 <?php
-ob_start();
+ob_start();  //necessário para evitar que o header envie previamente a informação. Após a integração do CKEditor, foi necessário colocar o ob_start() para reter a informação do header e evitar que surja um warning após a edição de informação e reenvio pelo header location. Por exemplo, na página de atualização de contactos, após a incorporação do CKEditor, depois de se atualizar a informação, o header location reencaminha o usuário para a página de contactos e surjia nesta um aviso de que a informação do header já havia sido enviada. O ob_start() retém essa informação incial e envia tudo apenas com esse header location.
 
 if(!verificarLogin()){
     header("Location: index.php");
