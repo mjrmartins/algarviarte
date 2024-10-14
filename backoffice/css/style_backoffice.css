@@ -38,7 +38,7 @@ html {
 
 .t5 {
   text-transform: uppercase;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: #5990ad;
   font-size: 20px;
 }
@@ -218,7 +218,8 @@ footer {
 }
 
 .close,
-.close2 {
+.close2,
+.close3 {
   border: 3px solid rgb(105, 105, 105);
   text-transform: uppercase;
   border-radius: 5px;
@@ -235,6 +236,14 @@ footer {
 .close2:hover {
   border: 1px solid green;
   background-color: green;
+  color: whitesmoke;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.close3:hover {
+  border: 1px solid yellow;
+  background-color: yellow;
   color: whitesmoke;
   font-size: larger;
   font-weight: bolder;
@@ -296,7 +305,6 @@ th,
 td {
   padding: 5px;
 }
-
 
 /* MEDIA QUERY */
 @media all and (max-width: 1140px) {
