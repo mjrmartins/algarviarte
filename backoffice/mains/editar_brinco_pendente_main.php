@@ -46,7 +46,7 @@ if($form2){
             <input type="text" name="referencia" required="required" style="width: 100%;"
                 value="<?= $brinco["referencia"]; ?>">
             <br><br>
-            <input type="submit" value="editar" class="close3 mb-3 mt-3">
+            <input type="submit" value="editar" class="editar mb-3 mt-3">
         </form>
         <a href="brincos_pendentes.php"><button class="close2">voltar</button></a>
     </div>

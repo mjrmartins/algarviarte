@@ -30,7 +30,7 @@ $brincosPendentes = getTodosBrincosPendentes();
                 <td><img src="<?= getImagemBrincosPendentes($b["id"]); ?>" class="img-backoffice" alt="imagem_brinco" /></td>
                 <td>
                     <form action="editar_brinco_pendente.php">
-                        <button name="editar" value="<?= $b["id"]; ?>" class="close2">e</button>
+                        <button name="editar" value="<?= $b["id"]; ?>" class="editar">e</button>
                     </form>
                 </td>
                 <td>

@@ -30,7 +30,7 @@ $brincosAI = getTodosBrincosAI();
                 <td><img src="<?= getImagemBrincosAI($b["id"]); ?>" class="img-backoffice" alt="imagem_brinco" /></td>
                 <td>
                     <form action="editar_brinco_aco_inoxidavel.php">
-                        <button name="editar" value="<?= $b["id"]; ?>" class="close2">e</button>
+                        <button name="editar" value="<?= $b["id"]; ?>" class="editar">e</button>
                     </form>
                 </td>
                 <td>
