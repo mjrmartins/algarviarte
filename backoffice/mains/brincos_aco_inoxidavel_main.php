@@ -15,6 +15,11 @@ $brincosAI = getTodosBrincosAI();
         <form action="novo_brinco_aco_inoxidavel.php" class="mb-3">
             <button name="criar" value="" class="close2">adicionar novo</button>
         </form>
+
+        <form action="editar_texto_brincos.php" class="mb-3">
+            <button name="editarTexto" value="aco_inoxidavel.php" class="close2">editar textos</button>
+        </form>
+
         <table>
             <tr>
                 <th>id</th>

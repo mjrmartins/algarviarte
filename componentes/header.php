@@ -26,7 +26,7 @@ $brincos = getDropBrincos();
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- JAVASCRIPT -->
-    <script src="http://localhost/algarviarte/javascript/function.js"></script>
+    <script src="https://algarviarte.great-site.net/javascript/function.js"></script>
 </head>
 
 <body class="w-100 mx-auto" onload="cookies(), scroll()">
@@ -68,11 +68,11 @@ $brincos = getDropBrincos();
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= ($pagina_atual == "informacao" ? "active" : ""); ?>"
-                                    href="informacao.php">Informação</a>
+                                    href="https://algarviarte.great-site.net/informacao.php">Informação</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= ($pagina_atual == "contactos" ? "active" : ""); ?>"
-                                    href="contactos.php">Contactos</a>
+                                    href="https://algarviarte.great-site.net/contactos.php">Contactos</a>
                             </li>
                         </ul>
                     </div>

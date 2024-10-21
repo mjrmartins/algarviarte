@@ -25,7 +25,7 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script src="http://localhost/algarviarte/javascript/main.js"></script>
+    <script src="https://algarviarte.great-site.net/javascript/main.js"></script>
     </body>
 
     </html>

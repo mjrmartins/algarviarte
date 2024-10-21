@@ -33,7 +33,7 @@ $tamanho = count($imagensAI);
                     data-index="<?= $imagem; ?>" onclick="abrirModal()" />
                 <div class="card-body d-flex flex-wrap">
                     <h5 class="card-title">ref: <?= $referencia; ?></h5>
-                    <a href="http://localhost/algarviarte/informacao.php" class="btn mt-3 mx-auto">como encomendar</a>
+                    <a href="https://algarviarte.great-site.net/informacao.php" class="btn mt-3 mx-auto">como encomendar</a>
                 </div>
             </div>
             <?php endfor; ?>
