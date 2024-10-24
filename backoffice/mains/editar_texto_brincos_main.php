@@ -6,6 +6,7 @@ if($form){
     $tipo = $_GET["editarTexto"];
 }
 
+<<<<<<< HEAD
 $form2 = isset($_GET["textoMola"]) && isset($_GET["textoCurtos"]) && isset($_GET["textoPendentes"]) && isset($_GET["textoDestaques"]) && isset($_GET["editarTexto"]);
 
 if($form2){
@@ -17,6 +18,17 @@ if($form2){
 
     iduSQL("UPDATE tipo_brincos SET texto='$textoDestaques' WHERE id='4'");
     iduSQL("UPDATE tipo_brincos SET texto='$textoMola' WHERE id='3'");
+=======
+$form2 = isset($_GET["textoAco"]) && isset($_GET["textoCurtos"]) && isset($_GET["textoPendentes"]) &&isset($_GET["editarTexto"]);
+
+if($form2){
+    $tipoBrinco = $_GET["editarTexto"];
+    $textoAco = $_GET["textoAco"];
+    $textoCurtos = $_GET["textoCurtos"];
+    $textoPendentes = $_GET["textoPendentes"];
+
+    iduSQL("UPDATE tipo_brincos SET texto='$textoAco' WHERE id='3'");
+>>>>>>> fa2c28382def5b9b8c3e0e39e66c8b3a2603b3b0
     iduSQL("UPDATE tipo_brincos SET texto='$textoCurtos' WHERE id='2'");
     iduSQL("UPDATE tipo_brincos SET texto='$textoPendentes' WHERE id='1'");
 
@@ -37,9 +49,15 @@ if($form2){
     <div class="row mt-3 mb-2 px-0 mx-0 text-center">
         <form action="" class="col-8 mx-auto">
             <input type="hidden" name="editarTexto" value="<?= $tipo; ?>">
+<<<<<<< HEAD
             <label for="textoMola" class="t5">texto dos brincos de mola</label>
             <br>
             <textarea name="textoMola" id="editor1" autofocus rows="8"
+=======
+            <label for="textoAco" class="t5">texto dos brincos de aço inoxidável</label>
+            <br>
+            <textarea name="textoAco" id="editor1" autofocus rows="8"
+>>>>>>> fa2c28382def5b9b8c3e0e39e66c8b3a2603b3b0
                 style="width: 100%;"><?= getTextoBrincos(3); ?></textarea>
 
             <script>
@@ -50,7 +68,11 @@ if($form2){
                 });
             </script>
             <br><br><br>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> fa2c28382def5b9b8c3e0e39e66c8b3a2603b3b0
             <label for="textoCurtos" class="t5">texto dos brincos curtos</label>
             <br>
             <textarea name="textoCurtos" id="editor2" autofocus rows="8"
@@ -77,6 +99,7 @@ if($form2){
                     console.error(error);
                 });
             </script>
+<<<<<<< HEAD
             <br><br><br>
 
             <label for="textoDestaques" class="t5">texto dos brincos em destaque</label>
@@ -91,6 +114,8 @@ if($form2){
                     console.error(error);
                 });
             </script>
+=======
+>>>>>>> fa2c28382def5b9b8c3e0e39e66c8b3a2603b3b0
             <br>
 
             <input type="submit" value="EDITAR" class="editar mb-3 mt-3">

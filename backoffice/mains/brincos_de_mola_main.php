@@ -17,7 +17,11 @@ $brincosMola = getTodosBrincosMola();
         </form>
 
         <form action="editar_texto_brincos.php" class="mb-3">
+<<<<<<< HEAD:backoffice/mains/brincos_de_mola_main.php
             <button name="editarTexto" value="de_mola.php" class="close2">editar textos</button>
+=======
+            <button name="editarTexto" value="aco_inoxidavel.php" class="close2">editar textos</button>
+>>>>>>> fa2c28382def5b9b8c3e0e39e66c8b3a2603b3b0:backoffice/mains/brincos_aco_inoxidavel_main.php
         </form>
 
         <table>
