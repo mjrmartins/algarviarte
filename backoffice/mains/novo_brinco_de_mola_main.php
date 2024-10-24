@@ -7,8 +7,8 @@ if($form){
     $referencia = $_GET["referencia"];
 
 
-    iduSQL("INSERT INTO brincos_aco_inoxidavel(imagem, referencia) VALUES ('$imagem', '$referencia')");
-    header("Location: brincos_aco_inoxidavel.php");
+    iduSQL("INSERT INTO brincos_de_mola(imagem, referencia) VALUES ('$imagem', '$referencia')");
+    header("Location: brincos_de_mola.php");
     exit();
 }
 
@@ -17,7 +17,7 @@ if($form){
 <main class="container mt-3 px-0 mx-auto">
     <div class="row mt-2 mb-2 px-0 mx-0">
         <div class="col-4 t4 mx-auto text-center mt-3">
-            novo brinco aço inoxidável
+            novo brinco de mola
         </div>
     </div>
     <div class="row mt-3 mb-2 px-0 mx-0 text-center">
@@ -37,6 +37,6 @@ if($form){
             <br><br>
             <input type="submit" value="criar novo" class="close2 mb-3 mt-3">
         </form>
-        <a href="brincos_aco_inoxidavel.php"><button class="close2">voltar</button></a>
+        <a href="brincos_de_mola.php"><button class="close2">voltar</button></a>
     </div>
 </main>

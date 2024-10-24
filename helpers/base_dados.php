@@ -1,6 +1,6 @@
 <?php
 
-$pdo = New PDO("mysql:host=sql204.infinityfree.com;dbname=if0_37541991_algarviarte;charset=utf8mb4;", "if0_37541991", "zer0algarviarte");
+$pdo = New PDO("mysql:host=localhost;dbname=algarviarte;charset=utf8mb4;", "root", "");
 
 function selectSQL($sql){
     global $pdo;

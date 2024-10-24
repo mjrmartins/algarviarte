@@ -1,10 +1,10 @@
 <?php
 
-$imagensPendentes = getImagensBrincosPendentes();
+$imagensDestaques = getImagensBrincosDestaques();
 
-$ref = getRefsBrincosPendentes();
+$ref = getRefsBrincosDestaques();
 
-$tamanho = count($imagensPendentes);
+$tamanho = count($imagensDestaques);
 
 ?>
 
@@ -12,13 +12,13 @@ $tamanho = count($imagensPendentes);
     <div class="col-8 mx-auto">
         <div class="row px-0 mx-0">
             <div class="col-10 mx-auto text-center t1 mt-5 pt-4 hometitle principal">
-                brincos <?= getTituloBrincos("1"); ?>
+                <?= getTituloBrincos("4"); ?>
             </div>
         </div>
 
         <div class="row px-0 mx-0 mt-4 mb-4">
             <div class="texto1">
-                <?= getTextoBrincos("1"); ?>
+                <?= getTextoBrincos("4"); ?>
             </div>
         </div>
     </div>
@@ -27,13 +27,14 @@ $tamanho = count($imagensPendentes);
     <div class="row mx-0 px-0 mt-3 mb-3">
         <div class="col-10 d-flex justify-content-center gap-4 flex-wrap px-0 mx-auto">
 
-            <?php for($i = 0; $i<$tamanho; $i++): $imagem = $imagensPendentes[$i]["imagem"]; $referencia = $ref[$i]["referencia"]?>
+            <?php for($i = 0; $i<$tamanho; $i++): $imagem = $imagensDestaques[$i]["imagem"]; $referencia = $ref[$i]["referencia"]?>
             <div class="card" style="width: 14rem">
-                <img src="<?= $imagem; ?>" class="card-img-top img-card" id="imagemAI" alt="imagem_brinco"
+                <img src="<?= $imagem; ?>" class="card-img-top img-card" id="imagemDestaques" alt="imagem_brinco"
                     data-index="<?= $imagem; ?>" onclick="abrirModal()" />
                 <div class="card-body d-flex flex-wrap">
                     <h5 class="card-title">ref: <?= $referencia; ?></h5>
-                    <a href="http://localhost/algarviarte/informacao.php" class="btn mt-3 mx-auto">como encomendar</a>
+                    <a href="http://localhost/algarviarte/informacao.php" class="btn mt-3 mx-auto">como
+                        encomendar</a>
                 </div>
             </div>
             <?php endfor; ?>

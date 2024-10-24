@@ -6,15 +6,17 @@ if($form){
     $tipo = $_GET["editarTexto"];
 }
 
-$form2 = isset($_GET["textoAco"]) && isset($_GET["textoCurtos"]) && isset($_GET["textoPendentes"]) &&isset($_GET["editarTexto"]);
+$form2 = isset($_GET["textoMola"]) && isset($_GET["textoCurtos"]) && isset($_GET["textoPendentes"]) && isset($_GET["textoDestaques"]) && isset($_GET["editarTexto"]);
 
 if($form2){
     $tipoBrinco = $_GET["editarTexto"];
-    $textoAco = $_GET["textoAco"];
+    $textoMola = $_GET["textoMola"];
     $textoCurtos = $_GET["textoCurtos"];
     $textoPendentes = $_GET["textoPendentes"];
+    $textoDestaques = $_GET["textoDestaques"];
 
-    iduSQL("UPDATE tipo_brincos SET texto='$textoAco' WHERE id='3'");
+    iduSQL("UPDATE tipo_brincos SET texto='$textoDestaques' WHERE id='4'");
+    iduSQL("UPDATE tipo_brincos SET texto='$textoMola' WHERE id='3'");
     iduSQL("UPDATE tipo_brincos SET texto='$textoCurtos' WHERE id='2'");
     iduSQL("UPDATE tipo_brincos SET texto='$textoPendentes' WHERE id='1'");
 
@@ -35,9 +37,9 @@ if($form2){
     <div class="row mt-3 mb-2 px-0 mx-0 text-center">
         <form action="" class="col-8 mx-auto">
             <input type="hidden" name="editarTexto" value="<?= $tipo; ?>">
-            <label for="textoAco" class="t5">texto dos brincos de aço inoxidável</label>
+            <label for="textoMola" class="t5">texto dos brincos de mola</label>
             <br>
-            <textarea name="textoAco" id="editor1" autofocus rows="8"
+            <textarea name="textoMola" id="editor1" autofocus rows="8"
                 style="width: 100%;"><?= getTextoBrincos(3); ?></textarea>
 
             <script>
@@ -48,7 +50,7 @@ if($form2){
                 });
             </script>
             <br><br><br>
-            
+
             <label for="textoCurtos" class="t5">texto dos brincos curtos</label>
             <br>
             <textarea name="textoCurtos" id="editor2" autofocus rows="8"
@@ -71,6 +73,20 @@ if($form2){
             <script>
             ClassicEditor
                 .create(document.querySelector('#editor3'))
+                .catch(error => {
+                    console.error(error);
+                });
+            </script>
+            <br><br><br>
+
+            <label for="textoDestaques" class="t5">texto dos brincos em destaque</label>
+            <br>
+            <textarea name="textoDestaques" id="editor4" autofocus rows="8"
+                style="width: 100%;"><?= getTextoBrincos(4); ?></textarea>
+
+            <script>
+            ClassicEditor
+                .create(document.querySelector('#editor4'))
                 .catch(error => {
                     console.error(error);
                 });

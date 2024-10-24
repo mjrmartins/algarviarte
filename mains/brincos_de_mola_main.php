@@ -1,10 +1,10 @@
 <?php
 
-$imagensAI = getImagensBrincosAI();
+$imagensMola = getImagensBrincosMola();
 
-$ref = getRefsBrincosAI();
+$ref = getRefsBrincosMola();
 
-$tamanho = count($imagensAI);
+$tamanho = count($imagensMola);
 
 ?>
 
@@ -27,13 +27,14 @@ $tamanho = count($imagensAI);
     <div class="row mx-0 px-0 mt-3 mb-3">
         <div class="col-10 d-flex justify-content-center gap-4 flex-wrap px-0 mx-auto">
 
-            <?php for($i = 0; $i<$tamanho; $i++): $imagem = $imagensAI[$i]["imagem"]; $referencia = $ref[$i]["referencia"]?>
+            <?php for($i = 0; $i<$tamanho; $i++): $imagem = $imagensMola[$i]["imagem"]; $referencia = $ref[$i]["referencia"]?>
             <div class="card" style="width: 14rem">
                 <img src="<?= $imagem; ?>" class="card-img-top img-card" id="imagemAI" alt="imagem_brinco"
                     data-index="<?= $imagem; ?>" onclick="abrirModal()" />
                 <div class="card-body d-flex flex-wrap">
                     <h5 class="card-title">ref: <?= $referencia; ?></h5>
-                    <a href="https://algarviarte.great-site.net/informacao.php" class="btn mt-3 mx-auto">como encomendar</a>
+                    <a href="https://algarviarte.great-site.net/informacao.php" class="btn mt-3 mx-auto">como
+                        encomendar</a>
                 </div>
             </div>
             <?php endfor; ?>

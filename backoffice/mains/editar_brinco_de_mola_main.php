@@ -6,11 +6,11 @@ if($form){
     $id = $_GET["editar"];
 }
 else{
-    header("Location: brincos_aco_inoxidavel.php");
+    header("Location: brincos_de_mola.php");
     exit();
 }
 
-$brinco = selectSQLUnico("SELECT * FROM brincos_aco_inoxidavel WHERE id=$id");
+$brinco = selectSQLUnico("SELECT * FROM brincos_de_mola WHERE id=$id");
 
 $form2 = isset($_GET["imagem"]) && isset($_GET["referencia"]);
 
@@ -18,8 +18,8 @@ if($form2){
     $imagem = $_GET["imagem"];
     $referencia = $_GET["referencia"];
 
-    iduSQL("UPDATE brincos_aco_inoxidavel SET imagem='$imagem', referencia='$referencia' WHERE id='$id'");
-    header("Location: brincos_aco_inoxidavel.php");
+    iduSQL("UPDATE brincos_de_mola SET imagem='$imagem', referencia='$referencia' WHERE id='$id'");
+    header("Location: brincos_de_mola.php");
     exit();
 }
 
@@ -28,7 +28,7 @@ if($form2){
 <main class="container mt-3 px-0 mx-auto">
     <div class="row mt-2 mb-2 px-0 mx-0">
         <div class="col-4 t4 mx-auto text-center mt-3">
-            editar brinco aço inoxidável
+            editar brinco de mola
         </div>
     </div>
     <div class="row mt-3 mb-2 px-0 mx-0 text-center">
@@ -48,6 +48,6 @@ if($form2){
             <br><br>
             <input type="submit" value="editar" class="editar mb-3 mt-3">
         </form>
-        <a href="brincos_aco_inoxidavel.php"><button class="close2">voltar</button></a>
+        <a href="brincos_de_mola.php"><button class="close2">voltar</button></a>
     </div>
 </main>

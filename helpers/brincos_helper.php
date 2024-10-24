@@ -26,34 +26,34 @@ function getTextoAbreviadoBrincos($id){
 }
 
 
-/* AÇO INOXIDÁVEL */
-function getTodosBrincosAI(){
-    $resultado = selectSQL("SELECT * FROM brincos_aco_inoxidavel");
+/* MOLA */
+function getTodosBrincosMola(){
+    $resultado = selectSQL("SELECT * FROM brincos_de_mola");
     return $resultado;
 }
 
-function getImagensBrincosAI(){
-    $resultado = selectSQL("SELECT imagem FROM brincos_aco_inoxidavel");
+function getImagensBrincosMola(){
+    $resultado = selectSQL("SELECT imagem FROM brincos_de_mola");
     return $resultado;
 }
 
-function getImagemBrincosAI($id){
-    $resultado = selectSQLUnico("SELECT imagem FROM brincos_aco_inoxidavel WHERE id=$id");
+function getImagemBrincosMola($id){
+    $resultado = selectSQLUnico("SELECT imagem FROM brincos_de_mola WHERE id=$id");
     return $resultado["imagem"];
 }
 
-function getRefBrincosAI($id){
-    $resultado = selectSQLUnico("SELECT referencia FROM brincos_aco_inoxidavel WHERE id=$id");
+function getRefBrincosMola($id){
+    $resultado = selectSQLUnico("SELECT referencia FROM brincos_de_mola WHERE id=$id");
     return $resultado["referencia"];
 }
 
-function getRefsBrincosAI(){
-    $resultado = selectSQL("SELECT referencia FROM brincos_aco_inoxidavel");
+function getRefsBrincosMola(){
+    $resultado = selectSQL("SELECT referencia FROM brincos_de_mola");
     return $resultado;
 }
 
-function getIdsAI(){
-    $resultado = selectSQL("SELECT id FROM brincos_aco_inoxidavel");
+function getIdsMola(){
+    $resultado = selectSQL("SELECT id FROM brincos_de_mola");
     return $resultado;
 }
 
@@ -107,6 +107,32 @@ function getRefBrincosPendentes($id){
 
 function getRefsBrincosPendentes(){
     $resultado = selectSQL("SELECT referencia FROM brincos_pendentes");
+    return $resultado;
+}
+
+/* DESTAQUES */
+function getTodosBrincosDestaques(){
+    $resultado = selectSQL("SELECT * FROM brincos_destaques");
+    return $resultado;
+}
+
+function getImagensBrincosDestaques(){
+    $resultado = selectSQL("SELECT imagem FROM brincos_destaques");
+    return $resultado;
+}
+
+function getImagemBrincosDestaques($id){
+    $resultado = selectSQLUnico("SELECT imagem FROM brincos_destaques WHERE id=$id");
+    return $resultado["imagem"];
+}
+
+function getRefBrincosDestaques($id){
+    $resultado = selectSQLUnico("SELECT referencia FROM brincos_destaques WHERE id=$id");
+    return $resultado["referencia"];
+}
+
+function getRefsBrincosDestaques(){
+    $resultado = selectSQL("SELECT referencia FROM brincos_destaques");
     return $resultado;
 }
 

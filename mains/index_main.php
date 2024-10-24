@@ -1,9 +1,10 @@
 <?php
 
 $brincos = getTodosBrincos();
-$imagensAI = getImagensBrincosAI();
+$imagensMola = getImagensBrincosMola();
 $imagensCurtos = getImagensBrincosCurtos();
 $imagensPendentes = getImagensBrincosPendentes();
+$imagensDestaques = getImagensBrincosDestaques();
 
 ?>
 
@@ -35,19 +36,6 @@ $imagensPendentes = getImagensBrincosPendentes();
     <!-- CARDS -->
     <div class="row mx-0 px-0 mt-3 mb-3">
         <div class="col-10 d-flex justify-content-center gap-4 flex-wrap px-0 mx-auto">
-            <!-- AÇO -->
-            <div class="card" style="width: 18rem">
-                <img src="<?= $imagensAI[0]["imagem"]; ?>" class="card-img-top" alt="brinco1" />
-                <div class="card-body d-flex flex-wrap">
-                    <h5 class="card-title"><?=getTituloBrincos("3"); ?></h5>
-                    <p class="card-text">
-                        <?= getTextoAbreviadoBrincos("3"); ?>
-                    </p>
-                    <a href="brincos_aco_inoxidavel.php" class="mx-auto">
-                        <button class="btn">ver mais</button>
-                    </a>
-                </div>
-            </div>
 
             <!-- CURTOS -->
             <div class="card" style="width: 18rem">
@@ -63,6 +51,20 @@ $imagensPendentes = getImagensBrincosPendentes();
                 </div>
             </div>
 
+            <!-- MOLA -->
+            <div class="card" style="width: 18rem">
+                <img src="<?= $imagensMola[0]["imagem"]; ?>" class="card-img-top" alt="brinco1" />
+                <div class="card-body d-flex flex-wrap">
+                    <h5 class="card-title"><?=getTituloBrincos("3"); ?></h5>
+                    <p class="card-text">
+                        <?= getTextoAbreviadoBrincos("3"); ?>
+                    </p>
+                    <a href="brincos_de_mola.php" class="mx-auto">
+                        <button class="btn">ver mais</button>
+                    </a>
+                </div>
+            </div>
+
             <!-- PENDENTES -->
             <div class="card" style="width: 18rem">
                 <img src="<?= $imagensPendentes[0]["imagem"]; ?>" class="card-img-top" alt="brinco1" />
@@ -72,6 +74,20 @@ $imagensPendentes = getImagensBrincosPendentes();
                         <?= getTextoAbreviadoBrincos("1"); ?>
                     </p>
                     <a href="brincos_pendentes.php" class="mx-auto">
+                        <button class="btn">ver mais</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DESTAQUES -->
+            <div class="card" style="width: 18rem">
+                <img src="<?= $imagensDestaques[0]["imagem"]; ?>" class="card-img-top" alt="brinco1" />
+                <div class="card-body d-flex flex-wrap">
+                    <h5 class="card-title"><?=getTituloBrincos("4"); ?></h5>
+                    <p class="card-text">
+                        <?= getTextoAbreviadoBrincos("4"); ?>
+                    </p>
+                    <a href="brincos_destaques.php" class="mx-auto">
                         <button class="btn">ver mais</button>
                     </a>
                 </div>
